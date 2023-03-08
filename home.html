@@ -1,0 +1,45 @@
+- //舊換新圖片 -->
+    <div onclick="changepic()" >
+        <img id="img" style="width:200pX;height:300px;
+                            transition:widt 0.5s,height 0.4s;
+                            opacity: 0.6;
+                            "
+            src="evgeny-matveev-ArEzsjLgG-I-unsplash.jpg" alt=""/>
+    </div>
+
+    <h3 id="myDIV">HTML DOM 基本介紹</h3>
+
+     <div id="content">HTML DOM 就是內建的window 物件</div>
+    
+     <!-- 1.HTML單行輸入框 -->
+    <div>
+        <input type="text"id="text" value="預設文字">
+        <button onclick="check()">Check</button>
+    </div>
+
+    <div id="result"></div>
+     
+     <!-- 2.如何設定單行輸入框的預設文字 -->
+     
+     <script>
+        function check(){
+            //取得想要操作的標籤
+            let element=document.querySelector("#text");
+            
+            //console.dir(輸入框的標籤)
+            //把使用者打的字後面加上字串顯示在網頁的另外一個標籤裡
+            console.log(element.value);
+            let words=element.value+"字串顯示"
+
+            let result=document.querySelector("#result");
+            result.innerHTML=words;
+        
+            
+    }
+    function changepic(){
+        let changelement=document.querySelector("#img");
+        document.getElementById("img").src="coffee.jpg";
+        
+    }
+
+     </script>
